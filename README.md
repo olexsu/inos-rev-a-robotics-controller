@@ -102,10 +102,6 @@ This homing architecture allows repeatable positioning and forms the foundation 
 
 ## Assembled Controller Board — Top
 
-![INOS Rev A Board Top](photos/inos_rev_a_board_top.jpg)
-
-## Assembled Controller Board — Bottom
-
 ![INOS Rev A Board Bottom](photos/inos_rev_a_board_bottom.jpg)
 
 Features:
