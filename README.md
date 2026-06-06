@@ -6,7 +6,7 @@ The platform follows a distributed control architecture where the NVIDIA Jetson 
 
 The first implementation of the INOS platform is a six-axis robotic arm prototype utilizing stepper motors, external motor drivers, and inductive proximity sensors for joint homing and position reference.
 
-![Robot Arm Prototype](photos/robot_arm_prototype_overview.png)
+![Robot Arm Prototype](photos/inos_rev_a_robot_arm_overview.jpg)
 
 ---
 
@@ -100,13 +100,13 @@ This homing architecture allows repeatable positioning and forms the foundation 
 
 # Custom Controller Hardware
 
-## Assembled Controller Board
+## Assembled Controller Board — Top
 
-![INOS Rev A Board](photos/inos_rev_a_board_assembled_top.JPG)
+![INOS Rev A Board Top](photos/inos_rev_a_board_top.jpg)
 
-## Bare PCB
+## Assembled Controller Board — Bottom
 
-![INOS Rev A Bare PCB](photos/inos_rev_a_board_unassembled_top.JPG)
+![INOS Rev A Board Bottom](photos/inos_rev_a_board_bottom.jpg)
 
 Features:
 
@@ -124,11 +124,11 @@ Features:
 
 ## PCB Layout
 
-![PCB Layout](photos/kicad_rev_a_pcb_layout.png)
+![PCB Layout](photos/inos_rev_b_pcb_layout.png)
 
 ## 3D Render
 
-![3D Render](photos/kicad_rev_a_3d_render.png)
+![3D Render](photos/inos_rev_b_3d_render.png)
 
 Designed using KiCad and manufactured through JLCPCB.
 
@@ -138,7 +138,7 @@ Designed using KiCad and manufactured through JLCPCB.
 
 ## Power-On Testing
 
-![Power-On Testing](photos/nos_rev_a_power_on_test.png)
+![Power-On Testing](photos/inos_rev_a_power_on_test.jpg)
 
 ## CAN Communication Testing
 
@@ -213,4 +213,3 @@ The long-term objective of the INOS platform is to create a scalable robotics ar
 # Disclaimer
 
 INOS Rev A is an experimental development platform and active engineering project. The hardware and software are continuously evolving as new features, capabilities, and lessons learned are incorporated into future revisions.
-
