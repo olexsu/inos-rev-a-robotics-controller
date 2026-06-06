@@ -2,15 +2,15 @@
 
 INOS Rev A is a custom robotics controller developed as a dedicated real-time motion-control node for NVIDIA Jetson-based robotic systems.
 
-The platform follows a distributed control architecture where the NVIDIA Jetson performs high-level tasks such as computer vision, AI processing, motion planning, and operator interaction, while the INOS controller executes deterministic real-time functions including motion control, homing, safety monitoring, and hardware management.
+The platform follows a distributed control architecture where the NVIDIA Jetson performs high-level functions such as computer vision, AI processing, motion planning, and operator interaction, while the INOS controller executes deterministic real-time functions including motion control, homing, safety monitoring, sensor processing, and hardware management.
 
 The first implementation of the INOS platform is a six-axis robotic arm prototype utilizing stepper motors, external motor drivers, and inductive proximity sensors for joint homing and position reference.
 
-![Robot Arm Prototype](photos/robot_arm_prototype_overview.jpg)
+![Robot Arm Prototype](photos/robot_arm_prototype_overview.png)
 
 ---
 
-## Project Overview
+# Project Overview
 
 INOS is built around a simple principle:
 
@@ -19,7 +19,7 @@ Real-time control belongs on dedicated embedded hardware.**
 
 This separation allows the robotics platform to maintain deterministic motion control while leveraging the computational capabilities of NVIDIA Jetson hardware for future AI and machine vision applications.
 
-### NVIDIA Jetson Responsibilities
+## NVIDIA Jetson Responsibilities
 
 * Computer vision
 * AI processing
@@ -27,7 +27,7 @@ This separation allows the robotics platform to maintain deterministic motion co
 * User interface
 * Task execution logic
 
-### INOS Controller Responsibilities
+## INOS Controller Responsibilities
 
 * Multi-axis motion control
 * Homing routines
@@ -38,7 +38,7 @@ This separation allows the robotics platform to maintain deterministic motion co
 
 ---
 
-## Hardware Features
+# Hardware Features
 
 * Teensy 4.1 real-time controller
 * CAN bus communication with NVIDIA Jetson
@@ -52,36 +52,36 @@ This separation allows the robotics platform to maintain deterministic motion co
 
 ---
 
-## System Architecture
+# System Architecture
 
-
+```text
 Controller / Vision System
-             │
-             ▼
-      NVIDIA Jetson
-      (High-Level Control)
-             │
-          CAN Bus
-             │
-             ▼
-         INOS Rev A
-  (Real-Time Controller)
-             │
-         STEP / DIR
-             │
-             ▼
-  External Driver Board
-             │
-             ▼
-      Stepper Motors
-             │
-             ▼
-  Inductive Homing Sensors
-
+            │
+            ▼
+     NVIDIA Jetson
+   (High-Level Control)
+            │
+         CAN Bus
+            │
+            ▼
+        INOS Rev A
+ (Real-Time Controller)
+            │
+        STEP / DIR
+            │
+            ▼
+ External Driver Board
+            │
+            ▼
+     Stepper Motors
+            │
+            ▼
+ Inductive Homing Sensors
+```
 
 ---
 
-## Homing and Position Reference
+# Homing and Position Reference
 
 One of the core functions of INOS Rev A is establishing known joint positions after power-up.
 
@@ -98,11 +98,15 @@ This homing architecture allows repeatable positioning and forms the foundation 
 
 ---
 
-## Custom Controller Hardware
+# Custom Controller Hardware
 
-### INOS Rev A Controller Board
+## Assembled Controller Board
 
-![INOS Rev A Board](photos/inos_rev_a_board_assembled_top.jpg)
+![INOS Rev A Board](photos/inos_rev_a_board_assembled_top.JPG)
+
+## Bare PCB
+
+![INOS Rev A Bare PCB](photos/inos_rev_a_board_unassembled_top.JPG)
 
 Features:
 
@@ -114,9 +118,15 @@ Features:
 * 24V power architecture
 * Expansion capability
 
-### PCB Design
+---
+
+# PCB Design
+
+## PCB Layout
 
 ![PCB Layout](photos/kicad_rev_a_pcb_layout.png)
+
+## 3D Render
 
 ![3D Render](photos/kicad_rev_a_3d_render.png)
 
@@ -124,30 +134,31 @@ Designed using KiCad and manufactured through JLCPCB.
 
 ---
 
-## Development and Validation
+# Development and Validation
 
-### Power-On Testing
+## Power-On Testing
 
-![Power-On Testing](photos/inos_rev_a_power_on_test.jpg)
+![Power-On Testing](photos/nos_rev_a_power_on_test.png)
 
-### CAN Communication Testing
+## CAN Communication Testing
 
-![CAN Bus Testing](photos/inos_rev_a_can_bus_test_setup.jpg)
+![CAN Bus Testing](photos/inos_rev_a_can_bus_test_setup.png)
 
 The INOS Rev A platform has successfully demonstrated:
 
 * Controller board bring-up
 * CAN communication
 * Multi-axis motion control
-* Homing sensor integration
+* Inductive sensor integration
+* Joint homing
 * Robotic arm operation
 * Embedded firmware validation
 
 ---
 
-## Current Status
+# Current Status
 
-### Completed
+## Completed
 
 * Custom PCB design
 * PCB manufacturing and assembly
@@ -157,14 +168,14 @@ The INOS Rev A platform has successfully demonstrated:
 * Inductive homing implementation
 * Robotic arm prototype integration
 
-### In Progress
+## In Progress
 
 * Motion-control refinement
 * Safety system development
 * CAN protocol expansion
 * System optimization
 
-### Planned
+## Planned
 
 * NVIDIA Jetson integration
 * Computer vision
@@ -174,7 +185,7 @@ The INOS Rev A platform has successfully demonstrated:
 
 ---
 
-## Project Goals
+# Project Goals
 
 The long-term objective of the INOS platform is to create a scalable robotics architecture capable of supporting:
 
@@ -186,7 +197,7 @@ The long-term objective of the INOS platform is to create a scalable robotics ar
 
 ---
 
-## Development Tools
+# Development Tools
 
 * KiCad
 * Teensy 4.1
@@ -195,9 +206,11 @@ The long-term objective of the INOS platform is to create a scalable robotics ar
 * NVIDIA Jetson
 * Ubuntu Linux
 * GitHub
+* JLCPCB
 
 ---
 
-## Disclaimer
+# Disclaimer
 
 INOS Rev A is an experimental development platform and active engineering project. The hardware and software are continuously evolving as new features, capabilities, and lessons learned are incorporated into future revisions.
+
