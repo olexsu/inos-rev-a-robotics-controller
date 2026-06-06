@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "Teensy 4.1 + Jetson custom board")(type "KiCad")(uri "${KIPRJMOD}/Teensy 4.1 + Jetson custom board.kicad_sym")(options "")(descr ""))
-)
