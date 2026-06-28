@@ -124,7 +124,7 @@ Features:
 
 ## 3D Render
 
-![3D Render](photos/inos_rev_b_3d_render.png)
+![3D Render](photos/inos_rev_b_pcb_render.png)
 
 Designed using KiCad and manufactured through JLCPCB.
 
