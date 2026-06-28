@@ -118,9 +118,6 @@ Features:
 
 # PCB Design
 
-## PCB Layout
-
-![PCB Layout](photos/inos_rev_b_pcb_layout.png)
 
 ## 3D Render
 
