@@ -1,4 +1,4 @@
-# INOS Rev A – Interface Networked Open Source System
+# INOS Rev A 
 
 INOS Rev A is a custom robotics controller developed as a dedicated real-time motion-control node for NVIDIA Jetson-based robotic systems.
 
