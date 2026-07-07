@@ -6,7 +6,6 @@ The platform follows a distributed control architecture where the NVIDIA Jetson 
 
 The first implementation of the INOS platform is a six-axis robotic arm prototype utilizing stepper motors, external motor drivers, and inductive proximity sensors for joint homing and position reference.
 
-![Robot Arm Prototype](photos/inos_rev_a_robot_arm_overview.jpg)
 
 ---
 
